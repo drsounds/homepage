@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+    	<base href="http://dr-sounds.com/">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+		<link rel="stylesheet" hreF="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/drsounds.css">
+        
+        <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+    </head>
+    <body>
+    	
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/underscore-min.js"></script>
+        <script src="js/vendor/backbone-min.js"></script>
+        <div class="row">
+        	<div class="container">
+        		
+        	</div>
+        </div>
+        <div class="row">
+		<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+		  
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Dr. Sounds</a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li data-section="home" class="active"><a href="#">Home</a></li>
+		        <li data-section="biography"><a href="/biography">Biography</a></li>
+		        <li data-section="music"><a href="/music">Music</a></li>
+		        <li data-section="gigs"><a href="/gigs">Gig</a></li>
+		        <li data-section="blog"><a href="/blog">Blog</a></li>
+		        
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		</nav>
+		  </div><!-- /.container-fluid -->
+		  </div>
+		<div class="row">
+			<div class="container">
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="box">
+								<div class="box-content">
+									<h3>Upcoming gigs</h3>
+									<div id="gigs"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				
+				</div>
+				<div class="col-md-6">
+					<section id="home">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="box">
+									<div class="box-content">
+										<h1>Welcome</h1>
+										<p data-binding-html="biography"></p>
+									</div>
+								</div>
+							</div
+						</div>
+					</section>
+					<section id="page">
+						<div class="box">
+							<div class="box-content">
+								<div class="row">
+									<div class="col-md-12">
+										<h3 data-binding-html="title"></h3>
+										<div class="row">
+											<div class="col-md-8">
+												<p data-binding-html="body"></p>
+											</div>
+											<div class="col-md-4 well">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="biography">
+						<div class="box">
+							<div class="box-content">
+								<div class="row">
+									<div class="col-md-12">
+										<h3>Bio</h3>
+										<div class="row">
+											<div class="col-md-12">
+												<p data-binding-html="biography"></p>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="notfound">
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Page not found</h1>
+							</div>
+						</div>
+					</section>
+					<section id="release">
+						<div class="box">
+						<div class="row box-content">
+							<div class="col-md-4">
+								<img data-binding-src="image" width="172px" />
+							</div>
+							<div class="col-md-6">
+								<h3 data-binding-html="name">w</h3>
+								<p data-binding-html="description"></p>
+							</div>		
+						</div>
+						
+						<div class="row">
+							
+						</div>
+						</div>
+					</section>
+				</div>
+				<div class="col-md-3">
+					<div class="box">
+						<div class="box-content">
+							<div class="row">
+								<div class="col-md-12">
+									<h3>New Music</h3>
+								</div>
+							</div>
+							<div class="row" id="release_feed">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class"container">
+				<div class="col-md-12" style="text-align: center">
+					&copy; 2014 Dr. Sounds
+				</div>
+			</div>
+		</div>
+		<script src="js/drsounds.js"></script>
+	
+			<img id="throbber" src="/img/ajax-loader.gif" />
+	
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
